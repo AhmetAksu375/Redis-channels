@@ -2,7 +2,6 @@ import check_redis as redisPy
 import check_sum as sumPy
 import check_min as minPy
 import check_max as maxPy
-# Description: Reads a file and sums the numbers in the file
 def checkSum():
     result = 0
     liste = []
@@ -12,16 +11,15 @@ def checkSum():
             liste.append(line.strip())
         for a in liste:
             if(a == ""):
-                #print(result)
-                redisPy.publishSum(result)
-                sumPy.checkSum(result)
+                redisPy.setPublishHighSum(result)
+                sumPy.checkSumFunc(result)
                 x = redisPy.p.get_message()
-                maxPy.checkMax()
-                minPy.checkMin()
+                maxPy.checkMaxFunc()
+                minPy.checkMinFunc()
                 result = 0
             else:
                 result += int(a)
 
 
 checkSum()
-redisPy.flushAll()
+redisPy.flushAllFunc()

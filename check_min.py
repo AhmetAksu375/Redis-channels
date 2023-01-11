@@ -7,9 +7,8 @@ p = r.pubsub()
 p.subscribe("low_sum")
 
 
-# function to subscribe to low_sum channel and check min then set new min
 
-def checkMin():
+def checkMinFunc():
     ts = int(time.time() % 2)
     
     message = p.get_message()

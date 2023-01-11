@@ -9,12 +9,10 @@ r.set("max_sum", 0)
 
 
 
-# function to subscribe to high_sum channel and check max then set new max
 
-def checkMax():
+def checkMaxFunc():
     ts = int(time.time() % 2)
     message = p.get_message()
-    #print("ts for max check: " + str(ts))
     if(message != None): 
         max = int(message['data'])
         currentMax = int(r.get("max_sum"))

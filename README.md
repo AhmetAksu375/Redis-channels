@@ -1,5 +1,7 @@
-### `Challenge`
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-f4981d0f882b2a3f0472912d15f9806d57e124e0fc890972558857b51b24a6f9.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=9681057)
+# Assignment 3
 
+In this assingment you'll be working with Redis and Event Driven Architecture
 
 ## Part 1
 
@@ -26,5 +28,9 @@ sum is lower than previous one set redis key `min_sum` to the current sum.
 
 ---
 
+Use the python files provided to help you with the assignment. A Github action
+will execute all your python code and check if it works.
+
+You can find examples of how to use redis library in the check_redis.py file.
 
 ![](diagram.png)
